@@ -1,0 +1,67 @@
+create database academico4
+
+create table alumno1
+(
+id int,
+nombre varchar(20),
+paterno varchar(20),
+ci varchar(11),
+extension varchar(10)
+)
+
+insert into alumno1 values(1,'moi','sil','44','la paz');
+insert into alumno1 values(2,'moyo','va','41','la paz');
+insert into alumno1 values(3,'mayo','ch','14','cochabamba');
+insert into alumno1 values(4,'miyo','o','64','cochabamba');
+insert into alumno1 values(5,'muyo','que','90','s cruz');
+
+
+
+create table alumno1
+(
+id int,
+nombre varchar(20),
+paterno varchar(20),
+ci varchar(11),
+extension varchar(10)
+);
+
+insert into alumno1 values(1,'moi','sil','44','la paz');
+insert into alumno1 values(2,'moyo','va','41','la paz');
+insert into alumno1 values(3,'mayo','ch','14','cochabamba');
+insert into alumno1 values(4,'miyo','o','64','cochabamba');
+insert into alumno1 values(5,'muyo','que','90','s cruz');
+
+
+select * from alumno1
+
+drop table alumno1
+
+
+create table alumno2
+(
+id int,
+nombre varchar(40),
+ci varchar(11),
+extension varchar(2)
+);
+
+insert into alumno2 values(1,'moi sil','44','LP');
+insert into alumno2 values(2,'moyo va','41','LP');
+insert into alumno2 values(3,'mayo ch','14','CB');
+
+
+create table alumnofinal
+(
+id int,
+nombre varchar(20),
+paterno varchar(20),
+ci varchar(11),
+extension varchar(10)
+);
+
+truncate table alumnofinal
+
+insert into alumnofinal 
+select id, nombre, null, ci, extension
+from alumno2
